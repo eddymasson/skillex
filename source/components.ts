@@ -5,6 +5,7 @@ import ControlSidebarComponent from './components/control-sidebar.component';
 // pages
 import HomeComponent from './components/home.component';
 import TeamComponent from './components/team.component';
+import SearchComponent from './components/search.component';
 
 // module
 let mod = angular.module('components', []);
@@ -16,5 +17,6 @@ mod.component('controlSidebar', ControlSidebarComponent.Factory());
 // pages
 mod.component('home', HomeComponent.Factory());
 mod.component('team', TeamComponent.Factory());
+mod.component('search', SearchComponent.Factory());
 
 export default mod;

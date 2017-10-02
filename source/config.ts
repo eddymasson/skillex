@@ -10,6 +10,10 @@ function config(locationProvider, stateProvider, urlRouterProvider) {
         url: '/team',
         template: '<team></team>'
     })
+    .state('search', {
+        url: '/search',
+        template: '<search></search>'
+    })
 }
 
 config.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
