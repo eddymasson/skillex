@@ -6,6 +6,8 @@ import ControlSidebarComponent from './components/control-sidebar.component';
 import HomeComponent from './components/home.component';
 import TeamComponent from './components/team.component';
 import SearchComponent from './components/search.component';
+import CheckComponent from './components/check.component';
+import SkillsComponent from './components/skills.component';
 
 // module
 let mod = angular.module('components', []);
@@ -18,5 +20,7 @@ mod.component('controlSidebar', ControlSidebarComponent.Factory());
 mod.component('home', HomeComponent.Factory());
 mod.component('team', TeamComponent.Factory());
 mod.component('search', SearchComponent.Factory());
+mod.component('check', CheckComponent.Factory());
+mod.component('skills', SkillsComponent.Factory());
 
 export default mod;

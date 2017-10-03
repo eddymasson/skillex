@@ -1,7 +1,7 @@
 export default class HomeComponent {
     message: string;
     constructor() {
-        this.message = 'Welcome';
+        this.message = 'Ceci est un message du controller :)';
     }
 
     $onInit(){}

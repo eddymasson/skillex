@@ -3,7 +3,7 @@ export default class SearchComponent {
     static Factory() {
         return {
             controller: SearchComponent,
-            templateUrl: 'views/components/search.html'
+            templateUrl: 'views/components/check.html'
         };
     }
 }

@@ -14,6 +14,14 @@ function config(locationProvider, stateProvider, urlRouterProvider) {
         url: '/search',
         template: '<search></search>'
     })
+    .state('check', {
+        url: '/check',
+        template: '<check></check>'
+    })
+    .state('skills', {
+        url: '/skills',
+        template: '<skills></skills>'
+    })
 }
 
 config.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
