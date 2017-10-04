@@ -12,29 +12,35 @@
 	<link rel="stylesheet" href="dist/css/AdminLTE.min.css">
 	<link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
 	<link href="dist/css/qubheader.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="dist/css/main.css">
 	  <!-- Select2 -->
-	  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css"/>
+
 	<style>
 		app { display: block }
-
-		
 		
 	</style>
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
-	<app class="wrapper"></app>
+	
+	<app class="wrapper"> </app>
+	
 	<script src="node_modules/es6-shim/es6-shim.min.js"></script>
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.3/angular-cookies.min.js"></script>
 	<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="node_modules/typescript/lib/typescript.js"></script>
 	<script src="node_modules/systemjs/dist/system.js"></script>
-	
+	<script src="dist/js/controller.js"></script>
 	<script>
 		System.config({
 			transpiler: 'typescript',
@@ -49,31 +55,42 @@
 
 	
 	<script src="dist/js/qubheader.min.js"></script>
-	<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+
+	<!-- jQuery 3.2.1 -->
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>>
 	<!-- Select2 -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+	
 	<script type="text/javascript">
-				$(function () {
-					//Données dures à remplacer par les données envoyées dans le POST 
+		$(function () {
+		  $('select2').select2();
+	  });
+	  </script>
+	<script type="text/javascript">
+					//Données dures à remplacer par les données envoyées dans le POST  
 					appNom = "Skillex";
 					user = "Nils Langen";
 					userId = 2;
 					admin = true;
 					team = "AT MMA";
 					teamId = 7;
-					role = "pilote";
+					var role = "pilote";
 					apiKey = "f3a7da7e66b0";
 					qubAdress = "http://qualitybox";
 	
+				$(function () {
+				
 					initQubHeader(appNom, user, userId, admin, team, teamId, role, apiKey, qubAdress);
 	
 	
 				});
+				
 	
 	</script>
 
+
 </body>
-<script type="text/javascript">
-	$('select2').select2();
-</script>
+<div  ng-app="myapp" ng-controller="MainCtrl" ng-init="getRole()">
+		Vous êtes connecté en tant que: {{role}}
+	  </div>
 </html>
